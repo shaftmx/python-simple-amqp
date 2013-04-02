@@ -5,7 +5,7 @@ import logging
 
 class SimpleAmqp:
 
-    def __init__(self, pool, pooltype):
+    def __init__(self, pool, pooltype='F'):
         # Disable pika log
         logging.getLogger('pika').setLevel(logging.CRITICAL)
         self._logger = logging.getLogger('simpleAmqp')

@@ -12,7 +12,7 @@ logging.getLogger('simpleAmqp').setLevel(logging.CRITICAL)
 logging.getLogger('simpleAmqp').setLevel(logging.INFO)
 logging.getLogger('simpleAmqp').addHandler(logging.StreamHandler())
 
-q = SimpleAmqp(pool=['rabbit1', 'rabbit2'], pooltype='L')
+q = SimpleAmqp(pool=['rabbit2', 'rabbit2'], pooltype='L')
 try:
     q.send('hello',"My message")
 except:
